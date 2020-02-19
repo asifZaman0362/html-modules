@@ -77,6 +77,11 @@ nav a:hover {
 	text-decoration: underline;
 }
 
+nav a:active, a:focus {
+    border: none;
+    outline: 0;
+}
+
 #menu-button {
 	top: 0;
 	right: 0;
