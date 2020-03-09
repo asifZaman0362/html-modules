@@ -32,7 +32,7 @@ function loadContent() {
     imgFront1.src = PATH + images[0] + ".jpg";
 }
 
-setInterval(updateSlides, 4000);
+var intervalId = setInterval(updateSlides, 4000);
 
 function updateSlides() {
     if (curr >= len-1) curr = 0;
