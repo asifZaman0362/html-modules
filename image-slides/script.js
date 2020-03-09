@@ -8,11 +8,14 @@ images = ["image", "image2", "image3", "image4", "image5"];
 
 // the <img> elements in the document
 var imgFront, imgBack, imgFront1, imgBack1;
+var buttonList1 = [], buttonList2 = [];
 
 var len = images.length;
-var curr = 0;
+var curr = len-1;
+var prev = len-1;
 
 window.addEventListener("load", loadContent);
+var intervalId = setInterval(updateSlides, 4000);
 
 function loadContent() {
 
@@ -24,22 +27,62 @@ function loadContent() {
     imgBack.style.left = "-100vw";
     imgFront = document.getElementById("slide02");
     imgFront.src = PATH + images[0] + ".jpg";
+    var buttonBar = document.getElementById("button_bar1");
+    for (i = 0; i < len; i++) {
+        var li = document.createElement("LI");
+        var button = document.createElement("A");
+        button.href = "javascript:void(0);";
+        const pos = i;
+        button.onclick = () => manualSlide(pos);
+        button.innerHTML = "&#xe02b";
+        li.appendChild(button);
+        buttonBar.appendChild(li);
+        buttonList1[i] = button;
+    }
 
     // Fading slides
     imgBack1 = document.getElementById("slide11");
     imgBack1.src = PATH + images[1] + ".jpg";
     imgFront1 = document.getElementById("slide12");
     imgFront1.src = PATH + images[0] + ".jpg";
-}
+    var buttonBar1 = document.getElementById("button_bar2");
+    for (i = 0; i < len; i++) {
+        var li = document.createElement("LI");
+        var button = document.createElement("A");
+        button.href = "javascript:void(0);";
+        const pos = i;
+        button.onclick = () => manualSlide(pos);
+        button.innerHTML = "&#xe02b";
+        li.appendChild(button);
+        buttonBar1.appendChild(li);
+        buttonList2[i] = button;
+    }
 
-var intervalId = setInterval(updateSlides, 4000);
+    updateSlides();
+}
 
 function updateSlides() {
     if (curr >= len-1) curr = 0;
     else curr++;
+    slideNext(curr);
+}
 
+function manualSlide(pos) {
+    curr = pos;
+    clearInterval(intervalId);
+    slideNext(pos);
+    intervalId = setInterval(updateSlides, 4000);
+}
+
+function slideNext(pos) {
+    buttonList1[prev].classList.remove("active");
+    buttonList1[curr].classList.add("active");
+    buttonList2[prev].classList.remove("active");
+    buttonList2[curr].classList.add("active");
+    prev = curr;
+    console.log(pos);
     //Sliding
-    imgBack.src = PATH + images[curr] + ".jpg"; // Update image source
+    imgBack.src = PATH + images[pos] + ".jpg"; // Update image source
     imgBack.style.transition = "1s"; // enable transition effect
     imgBack.style.left = "0"; // bring hidden slide in from left
     imgFront.style.transition = "1s"; // enable transition effect for second slide
@@ -47,7 +90,7 @@ function updateSlides() {
     setTimeout(resetSlidePosition, 1000); // reset the positions but with changed image sources
 
     // Fading
-    imgBack1.src = PATH + images[curr] + ".jpg"; // update source
+    imgBack1.src = PATH + images[pos] + ".jpg"; // update source
     imgFront1.style.transition = "1s"; // enable transition
     imgFront1.style.opacity = "0"; // fade out
     setTimeout(resetSlideOpacity, 1000); // fade back in with no transition and updated source

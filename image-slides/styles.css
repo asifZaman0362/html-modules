@@ -1,3 +1,5 @@
+@import url("https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css");
+
 body {
     background: rgb(50, 0, 50);
     color: black;
@@ -35,13 +37,12 @@ header h2 {
     margin: 0;
     font-size: 150%;
     line-height: 1em;
-    z-index: -1;
     width: 40%;
     font-weight: normal;
 }
 
 .content {
-    padding: 40px;   
+    padding: 2%;  
 }
 
 .gallery {
@@ -63,4 +64,39 @@ header h2 {
     left: 0;
     top: 0;
     object-fit: cover;
+}
+
+.gallery_buttons {
+    position: absolute;
+    width: 96%;
+    margin-top: -80px;
+    text-align: center;
+}
+
+.gallery_buttons ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+.gallery_buttons ul li a {
+    font-family: "iconmonstr-iconic-font";
+    display: block;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    line-height: 1.2em;
+    width: 20px;
+    height: 20px;
+    clip-path: circle(10px at center);
+    padding: 5px;
+}
+
+.gallery_buttons ul li a.active {
+    color: white;
+    background: white;
+}
+
+.gallery_buttons ul li a:hover {
+    color: white;
+    background: white;
 }
