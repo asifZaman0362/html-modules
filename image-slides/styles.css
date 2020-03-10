@@ -79,7 +79,6 @@ header h2 {
 }
 
 .gallery_buttons ul li a {
-    font-family: "iconmonstr-iconic-font";
     display: block;
     font-size: 20px;
     color: white;
@@ -89,6 +88,7 @@ header h2 {
     height: 20px;
     clip-path: circle(10px at center);
     padding: 5px;
+    background: rgba(0, 0, 0, 0.6);
 }
 
 .gallery_buttons ul li a.active {

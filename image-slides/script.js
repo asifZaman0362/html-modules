@@ -34,7 +34,7 @@ function loadContent() {
         button.href = "javascript:void(0);";
         const pos = i;
         button.onclick = () => manualSlide(pos);
-        button.innerHTML = "&#xe02b";
+        button.innerHTML = "";
         li.appendChild(button);
         buttonBar.appendChild(li);
         buttonList1[i] = button;
@@ -52,7 +52,7 @@ function loadContent() {
         button.href = "javascript:void(0);";
         const pos = i;
         button.onclick = () => manualSlide(pos);
-        button.innerHTML = "&#xe02b";
+        button.innerHTML = "";
         li.appendChild(button);
         buttonBar1.appendChild(li);
         buttonList2[i] = button;
