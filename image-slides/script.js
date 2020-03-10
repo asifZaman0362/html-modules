@@ -1,9 +1,9 @@
-var PATH = "images/"; // Path to the folder containing the images
-images = ["image", "image2", "image3", "image4", "image5"];
+var PATH = "../res/images/"; // Path to the folder containing the images
+//images = ["1", "2", "3", "4", "5", "6", "7"];
 
 // To get the images from the server automatically instead,
 // use the included php script and uncomment the line below :- 
-// images = files;
+images = files;
 
 
 // the <img> elements in the document
