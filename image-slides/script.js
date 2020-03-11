@@ -1,4 +1,4 @@
-var PATH = "../res/images/"; // Path to the folder containing the images
+var PATH = "../res/slides/"; // Path to the folder containing the images
 //images = ["1", "2", "3", "4", "5", "6", "7"];
 
 // To get the images from the server automatically instead,
