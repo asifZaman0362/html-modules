@@ -1,2 +1,2 @@
 # html-modules
-A collection of frequently used features while desugning websites. Feel free to contribute.
+A collection of frequently used features while designing websites. Feel free to contribute.
