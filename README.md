@@ -1,2 +1,2 @@
 # html-modules
-A bunch of little tools that I've written and compiled together for web designing
+A collection of frequently used features while desugning websites. Feel free to contribute.
