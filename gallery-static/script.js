@@ -25,6 +25,7 @@ function onDocumentLoad() {
 
         var hyperlink = document.createElement("A");
         hyperlink.href = PATH + files[i] + EXTENSION;
+        hyperlink.target = "_blank";
 
         var column_child = document.createElement("DIV");
         column_child.style.width = "100%";
