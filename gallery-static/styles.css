@@ -67,11 +67,6 @@ header p {
     grid-gap: 10px;
 }
 
-/* .column {
-    flex: 25%;
-    max-width: 25%;
-} */
-
 .gallery_grid .img_container {
     width: 100%;
     padding-top: 100%;
@@ -97,11 +92,4 @@ header p {
 	transform: scale(1.01);
 	box-shadow: -3px 4px 6px 0px rgba(0, 0, 0, 0.2), 
     2px 0px 6px 2px rgba(0, 0, 0, 0.3);
-}
-
-@media screen and (max-width: 800px) {
-    .column {
-      	flex: 50%;
-      	max-width: 50%;
-    }
 }
