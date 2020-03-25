@@ -47,6 +47,19 @@ header {
 	font-size: 30px;
 	line-height: 1em;
 	margin: 0;
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+header a {
+	text-decoration: none;
+}
+
+#title:hover {
+	color: purple;
+	text-decoration: underline;
 }
 
 #subtitle {

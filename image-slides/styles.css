@@ -30,6 +30,17 @@ header h1 {
     font-size: 250%;
     line-height: 1em;
     font-weight: bold;
+    transition: 0.5s;
+}
+
+header a {
+    color: purple;
+    text-decoration: none;
+}
+
+header h1:hover {
+    color: pink;
+    text-decoration: underline;
 }
 
 header h2 {
