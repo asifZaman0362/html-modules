@@ -34,12 +34,15 @@
 	
 	<header id="top" class="sticky">
 		
-		<div id="title-container">
-			<a href="../"><p id="title">html-modules</p></a>
-			<p id="subtitle">responsive navigation bar</p>
+		<div class="header-wrap">
+			<div id="title-container">
+				<a href="../"><p id="title">html-modules</p></a>
+				<p id="subtitle">responsive navigation bar</p>
+			</div>
+			<a id="menu-button" href="javascript:void(0);" onclick="expandMenu()"><p id="menu-button-text" style="margin: 0; padding: 0; transition: 0.5s;">&#xe003</p></a>
 		</div>
-		
-		<nav id="topnav" class="horizontal">
+
+		<nav id="topnav" class="classic closed">
 			<ul>
 				<li><a href="">HOME</a></li>
 				<li><a href="">SHOP</a></li>
@@ -48,8 +51,6 @@
 				<li><a href="">MEDIA</a></li>
 			</ul>
 		</nav>
-		
-		<a id="menu-button" href="javascript:void(0);" onclick="expandMenu()"><p id="menu-button-text" style="margin: 0; padding: 0; transition: 0.5s;">&#xe003</p></a>
 	
 	</header>
 

@@ -19,131 +19,124 @@
 * Authored by: Asif Zaman <zero362001@gmail.com>
 */
 
-.sticky {
-	position: sticky;
-	top: 0;
-}
-
 body {
-	background: black;
-	font-size: 20px;
-	font-family: 'Quicksand';
-	color: white;
-	padding: 0;
 	margin: 0;
+	font-family: 'Quicksand';
+	background: black;
+	color: white;
 }
 
 header {
-	position: sticky;
-	top: 0;
-	padding: 10px;
 	background: white;
 	color: black;
-	height: auto;
-	line-height: 1em;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	overflow: hidden;
+}
+
+header.sticky {
+	top: 0;
+	position: sticky;
+}
+
+#title-container {
+	padding: 20px;
+	flex-grow: 1;
 }
 
 #title {
-	font-size: 30px;
-	line-height: 1em;
-	margin: 0;
-	color: black;
 	font-weight: bold;
-	text-decoration: none;
-	transition: 0.5s;
-}
-
-header a {
-	text-decoration: none;
-}
-
-#title:hover {
-	color: purple;
-	text-decoration: underline;
+	margin: 0;
+	font-size: x-large;
 }
 
 #subtitle {
-	font-size: 20px;
-	font-weight: lighter;
 	margin: 0;
+	font-size: larger;
 }
 
-nav#topnav.vertical {
-	transition: 0.5s;
-}
-
-nav#topnav.vertical ul {
-	list-style: none;
-	margin: 0;
-	padding: 20px 0 20px 0;
-}
-
-nav#topnav.vertical ul li {
-	padding: 20px 0 20px 0;
-}
-
-nav.horizontal {
-	position: absolute;
-	top: 0;
-	right: 0;
-	font-size: 20px;
-	line-height: 70px;
-}
-
-nav.horizontal ul {
-	padding: 0;
-	padding-right: 10px;
-	margin: 0;
-}
-
-nav.horizontal ul li {
-	display: inline;
-}
-
-nav a {
+header a {
 	color: black;
 	text-decoration: none;
-	padding-left: 15px;
 }
 
-nav a:hover {
+header a:hover {
 	color: purple;
 	text-decoration: underline;
 }
 
-nav a:active, a:focus {
-    border: none;
-    outline: 0;
+#topnav {
+	margin: 0;
+	transition: 1s;
+}
+
+#topnav ul {
+	list-style: none;
+}
+
+#topnav ul li {
+	display: inline-block;
+	padding-right: 20px;
+}
+
+.header-wrap {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 100%;
+	align-items: center;
 }
 
 #menu-button {
-	top: 0;
-	right: 0;
-	line-height: 70px;
-	padding-right: 25px;
-	padding-left: 25px;
-	position: absolute;
-	display: none;
-	color: black;
-	text-decoration: none;
 	font-family: 'iconmonstr-iconic-font';
+	background: white;
+	height: 100%;
+	display: none;
+	padding: 40px;
+	font-size: 20px;
 }
 
 #menu-button:hover {
 	background: black;
 	color: white;
-}
-
-@media screen and (max-width: 720px) {
-	#menu-button {
-		display: block;
-	}
-	nav.horizontal {
-		transition: none;
-		transform: scaleY(0);
-	}
+	text-decoration: none;
 }
 
 .content {
-	padding: 10px;
+	padding: 0 20px;
+}
+
+@media screen and (max-width: 720px) {
+	header {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	#topnav ul {
+		list-style: disc;
+		padding: 0 20px 20px;
+		margin: 0;
+	}
+	#topnav ul li {
+		display: block;
+		margin-left: 0;
+		padding: 10px 0;
+	}
+	#topnav.expanded {
+		max-height: 250px;
+	}
+	
+	#topnav.closed {
+		max-height: 0;
+	}
+	#menu-button {
+		display: block;
+	}
+}
+
+@media screen and (min-width: 721px) {
+	.header-wrap {
+		width: auto;
+	}
 }

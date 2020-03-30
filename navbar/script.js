@@ -22,11 +22,11 @@
 function expandMenu() {
 	var nav = document.getElementById("topnav");
 	var button = document.getElementById("menu-button-text");
-	if (nav.classList.contains("horizontal")) {
-		nav.classList.replace("horizontal", "vertical");
+	if (nav.classList.contains("closed")) {
+		nav.classList.replace("closed", "expanded");
 		button.style.transform = "rotateZ(0.5turn)";
-	} else if (nav.classList.contains("vertical")) {
-		nav.classList.replace("vertical", "horizontal");
+	} else if (nav.classList.contains("expanded")) {
+		nav.classList.replace("expanded", "closed");
 		button.style.transform = "rotateZ(0turn)";
 	} else {
 		console.error("nav doesn't have a class!");
